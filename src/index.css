@@ -1,0 +1,104 @@
+body{
+  margin: 0;
+  background: orange;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.notes-book {
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0, 17%);
+  text-transform: uppercase;
+}
+ul.notes-list li.notes-item {
+  padding: 5px 10px;
+  border: 1px solid orange;
+  border-radius: 20px;
+  list-style-type: none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+ul.notes-list {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  overflow: auto;
+  padding-bottom: 8px;
+}
+ul.notes-list li.notes-item:hover {
+  background: orange;
+  color: white;
+}
+ul.notes-list::-webkit-scrollbar {
+  width: 5px;           
+  height: 5px;   
+
+}
+ul.notes-list::-webkit-scrollbar-track {
+  background: white;        
+}
+ul.notes-list::-webkit-scrollbar-thumb {
+  background-color: orange;    
+  border-radius: 20px;
+  padding-top: 5px;
+}
+.notes-book .note-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.note-input input[type="text"] {
+  width: 200px;
+}
+.note-input textarea{
+  height: 200px;
+  resize: none;
+}
+.note-input input[type="text"], 
+.note-input textarea {
+  border: 1px solid orange;
+  border-radius: 20px;
+  padding: 5px 15px;
+  transition: 0.4s;
+}
+.note-input input[type="text"]:focus-visible, 
+.note-input textarea:focus-visible {
+  outline-width: 0;
+  box-shadow: 0 3px 10px rgba(0,0,0, 17%);
+}
+.notes-book .note-btn button {
+  border: 1px solid orange;
+  background: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  padding: 3px 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.notes-book .note-btn button:hover{
+  background: orange;
+  color: white;
+}
+.notes-book .note-btn button:disabled {
+  cursor: no-drop;
+  background: white;
+  color: black;
+  opacity: 0.5;
+}
+.note-btn {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+}
